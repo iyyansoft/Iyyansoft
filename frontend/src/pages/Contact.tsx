@@ -109,7 +109,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h3 className="font-bold text-lg mb-1">Call Us</h3>
-                    <p className="text-gray-600">+91-XXXXXXXXXX</p>
+                    <p className="text-gray-600">+91-98845 95762</p>
                     <p className="text-gray-500 text-sm mt-1">
                       Mon–Fri, 9am – 6pm IST
                     </p>
