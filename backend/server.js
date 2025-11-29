@@ -6,12 +6,14 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-// Gmail SMTP transporter
+// Brevo SMTP transporter
 const transporter = nodemailer.createTransport({
-  service: "gmail",
+  host: "smtp-relay.brevo.com",
+  port: 587,
+  secure: false,
   auth: {
-    user: "iyyansoft@gmail.com",
-    pass: "uvlhteoetiptvlwy"  
+    user: "9cd200001@smtp-brevo.com",
+    pass: "P5zBjghURSXvykC4"
   }
 });
 
@@ -21,8 +23,9 @@ app.post("/send-email", async (req, res) => {
   console.log("Received contact form data:", req.body);
 
   const mailOptions = {
-    from:'iyyansoft@gmail.com',
-    to:'iyyansoft@gmail.com',
+    from: "9cd200001@smtp-brevo.com",        // Brevo-required FROM
+    to: "iyyansoft@gmail.com",              // You receive the mail
+    replyTo: email,                         // User's email → reply goes to user
     subject: `New Contact Form Message from ${name}`,
     text: `
 Name: ${name}
@@ -38,15 +41,16 @@ ${message}
 
   try {
     await transporter.sendMail(mailOptions);
-    console.log("Email sent successfully", mailOptions);
-    res.status(200).json({ success: true, message: "Email send successfully!" });
+    console.log("Email sent successfully");
+    res.status(200).json({ success: true, message: "Email sent successfully!" });
   } catch (error) {
-    console.error(error);
-    res.status(500).json({ success: false, error: "Email sending Failed" });
+    console.error("Error sending email:", error);
+    res.status(500).json({ success: false, error: "Email sending failed" });
   }
 });
 
-
-app.listen(5000, () => {
-  console.log("Server running on http://localhost:5000");
+// Render port handling
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, () => {
+  console.log("Server running on port", PORT);
 });
