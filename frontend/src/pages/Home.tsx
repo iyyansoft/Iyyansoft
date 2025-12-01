@@ -137,7 +137,7 @@ const Home = () => {
             <div className="lg:w-1/2 relative">
               <div className="absolute -inset-4 bg-primary/20 rounded-2xl blur-xl "></div>
               <img 
-                src="src/assets/team-collaboration1.jpeg" 
+                src="src/assets/team-collaboration2.jpeg" 
                 alt="Team collaboration" 
                 className="relative rounded-2xl shadow-2xl border border-gray-800 w-full h-auto max-w-xl mt-4"
               />
