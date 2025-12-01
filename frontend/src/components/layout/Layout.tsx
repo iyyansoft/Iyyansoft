@@ -33,21 +33,26 @@ const Header = () => {
 
   return (
     <header
-    className={`fixed w-full z-50 transition-all duration-300 bg-white ${
-      scrolled ? 'shadow-md py-2' : 'py-5'
-    }`}
-  >
+  className={`fixed w-full z-50 transition-all duration-300 bg-white ${
+    scrolled ? 'shadow-md py-2' : 'py-5'
+  }`}
+>
+  <div className="container mx-auto px-4 md:px-6 flex justify-between items-center">
 
-      <div className="container mx-auto px-4 md:px-6 flex justify-between items-center">
-        <Link to="/" className="flex items-center gap-2" aria-label="IyyanSoft Technologies home">
-        <Logo
-  className="h-10 md:h-12"
-  alt="IyyanSoft Technologies logo"
-  variant="colour"
-/>
+    {/* Logo Left Side */}
+    <Link to="/" className="flex items-center gap-3">
+      <img
+        src="/fav1.png"
+        alt="IyyanSoft Logo"
+        className="h-12 w-auto object-contain"></img>
+  
 
-
-        </Link>
+      <Logo
+        className="h-10 md:h-12"
+        alt="IyyanSoft Technologies logo"
+        variant="colour"
+      />
+    </Link>
 
         {/* Desktop Navigation */}
         <nav className="hidden lg:flex items-center gap-8">
@@ -114,13 +119,11 @@ const Footer = () => {
               IyyanSoft Technologies is a leading technology partner for educational institutions, startups, industries, and innovation ecosystems. We specialize in Makers Lab setup, IT services, and digital transformation.
             </p>
             <div className="flex gap-4">
-              <a href="#" className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary transition-colors text-white">
+              <a href="https://www.facebook.com/iyyansoft" className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary transition-colors text-white">
                 <Facebook size={18} />
               </a>
-              <a href="#" className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary transition-colors text-white">
-                <Twitter size={18} />
-              </a>
-              <a href="#" className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary transition-colors text-white">
+              
+              <a href="https://www.linkedin.com/company/iyyansoft-technologies/" className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary transition-colors text-white">
                 <Linkedin size={18} />
               </a>
               <a href="#" className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary transition-colors text-white">
@@ -161,7 +164,7 @@ const Footer = () => {
               </li>
               <li className="flex items-center gap-3 text-gray-400">
                 <Phone className="text-primary flex-shrink-0" size={20} />
-                <span>+91-XXXXXXXXXX</span>
+                <span>+91-98845 95762</span>
               </li>
               <li className="flex items-center gap-3 text-gray-400">
                 <Mail className="text-primary flex-shrink-0" size={20} />

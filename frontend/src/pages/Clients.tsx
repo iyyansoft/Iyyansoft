@@ -6,6 +6,10 @@ import { Building2, GraduationCap, Factory, ShoppingCart, Radio, Droplets, Rocke
 import AnnaUniversity from '../assets/annauniversity.png';
 import Max from '../assets/Max-Aquaa.jpg';
 import Mukil from '../assets/Mukil.png';
+import Startify from '../assets/startify.png';
+import CED from '../assets/CED.png';
+
+
 
 const Clients = () => {
 
@@ -14,7 +18,18 @@ const Clients = () => {
       name: "Anna University",
       description: "Makers Lab consulting & prototype development support. We partnered with this prestigious institution to enhance their innovation infrastructure and mentor student projects.",
       icon: AnnaUniversity,
-      color: "bg-blue-50 text-blue-600"
+      color: "bg-blue-50 text-blue-600",
+      extraImages: [
+    {
+      img: Startify,
+      link: "https://www.austartify.com/"
+    },
+    {
+      img: CED,
+      link: "https://www.auced.com/"   
+    }
+  ]
+      
     },
     {
       name: "Max Aquaa Tech Solution",
@@ -83,7 +98,7 @@ const Clients = () => {
                     <img 
                       src={client.icon} 
                       alt={client.name} 
-                      className="w-22 h-22 object-contain"
+                      className="w-22 h-22 object-contain mt-2"
                     />
                   ) : (
                     client.icon
@@ -92,6 +107,28 @@ const Clients = () => {
 
                 <h3 className="text-2xl font-bold mt-20 text-gray-900 text-center">{client.name}</h3>
                 <p className="text-gray-600 leading-relaxed mt-6 text-center">{client.description}</p>
+
+{client.extraImages && (
+  <div className="mt-6 flex justify-center gap-14">
+    {client.extraImages.map((item, i) => (
+      <a 
+        key={i}
+        href={item.link} 
+        target="_blank" 
+        rel="noopener noreferrer"
+      >
+        <img 
+          src={item.img}
+          alt="extra"
+          className="w-24 h-auto object-contain cursor-pointer hover:scale-105 transition-transform "
+        />
+      </a>
+    ))}
+  </div>
+)}
+
+
+
               </div>
             ))}
           </div>
