@@ -94,8 +94,8 @@ const Careers = () => {
           <p className="text-xl mb-8 max-w-2xl mx-auto">
             We are always looking for talented individuals. Send your resume to us, and we'll keep it on file for future opportunities.
           </p>
-          <a href="mailto:careers@iyyansoft.com" className="bg-white text-primary px-8 py-3 rounded-full font-bold hover:bg-black hover:text-white transition-colors inline-block">
-            careers@iyyansoft.com
+          <a href="mailto:iyyansoft@gmail.com" className="bg-white text-primary px-8 py-3 rounded-full font-bold hover:bg-black hover:text-white transition-colors inline-block">
+            iyyansoft@gmail.com
           </a>
         </div>
       </section>
