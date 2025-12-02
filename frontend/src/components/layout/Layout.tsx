@@ -41,10 +41,7 @@ const Header = () => {
 
     {/* Logo Left Side */}
     <Link to="/" className="flex items-center gap-3">
-      <img
-        src="/fav1.png"
-        alt="IyyanSoft Logo"
-        className="h-12 w-auto object-contain"></img>
+      
   
 
       <Logo
