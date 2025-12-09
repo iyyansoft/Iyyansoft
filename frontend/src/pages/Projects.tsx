@@ -59,7 +59,7 @@ const Projects = () => {
       title: "Retail Billing Automation",
       client: "Muthamil Super Market",
       category: "Enterprise Software",
-      image: {Muthamil},
+      image: Muthamil,
       description: "A custom POS and inventory management system.",
       features: [
         "Fast POS automation",
