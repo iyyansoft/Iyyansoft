@@ -1,7 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, CheckCircle, Lightbulb, Cpu, Code, Settings, Users, Award, Zap } from 'lucide-react';
-import TeamCollab from "../assets/team-collaboration1.jpeg";
+import TeamCollab from "../assets/why4.webp";
+import Iot from "../assets/iot.jpeg";
+import Consulting from "../assets/consulting.jpeg";
+import Web from "../assets/web.jpeg";
 
 
 
@@ -142,7 +145,7 @@ const Home = () => {
               <img 
   src={TeamCollab}
   alt="Team collaboration"
-  className="relative rounded-2xl shadow-2xl border border-gray-800 w-full h-auto max-w-xl mt-4"
+  className="relative rounded-2xl shadow-2xl border border-gray-800 w-full h-auto max-w-xl"
 />
 
             </div>
@@ -183,7 +186,7 @@ const Home = () => {
             <div className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all group">
               <div className="h-48 bg-gray-200 overflow-hidden">
                 <img 
-                  src="/assets/monitoring-prototype.jpeg" 
+                  src={Iot} 
                   alt="Smart Water Quality Monitor prototype" 
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                 />
@@ -204,7 +207,7 @@ const Home = () => {
             <div className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all group">
               <div className="h-48 bg-gray-200 overflow-hidden">
                 <img 
-                  src="/assets/eventzgo-platform.jpeg" 
+                  src={Web} 
                   alt="EventzGo ticketing platform dashboard" 
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                 />
@@ -225,7 +228,7 @@ const Home = () => {
             <div className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all group">
               <div className="h-48 bg-gray-200 overflow-hidden">
                 <img 
-                  src="/assets/idea-lab.jpeg" 
+                  src={Consulting} 
                   alt="Innovation lab support" 
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                 />
