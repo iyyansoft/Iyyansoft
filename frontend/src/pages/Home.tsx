@@ -5,6 +5,11 @@ import TeamCollab from "../assets/why4.webp";
 import Iot from "../assets/iot.jpeg";
 import Consulting from "../assets/consulting.jpeg";
 import Web from "../assets/web.jpeg";
+import home1 from "../assets/home1.jpeg";
+import home2 from "../assets/home2.jpeg";
+import home3 from "../assets/hoem3.jpg";
+
+
 
 
 
@@ -12,40 +17,109 @@ const Home = () => {
   return (
     <div className="flex flex-col w-full">
       {/* Hero Section */}
-      <section className="relative bg-black text-white py-24 lg:py-32 overflow-hidden">
-        <div className="absolute inset-0 ">
-          <img
-            src="/assets/hero-bg.jpeg"
-            alt="Abstract technology background"
-            className="w-full h-full object-cover opacity-30"
-          />
-        </div>
-        <div className="absolute inset-0 bg-gradient-to-r from-black via-black/90 to-transparent"></div>
-        
-        <div className="container mx-auto px-4 md:px-6 relative z-10">
-          <div className="max-w-3xl">
-            {/* <div className="inline-block bg-primary/20 text-primary px-4 py-1 rounded-full text-sm font-bold mb-6 border border-primary/30">
-              INNOVATION PARTNER FOR THE FUTURE
-            </div> */}
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6">
-              Transforming Ideas <br />
-              <span className="text-primary">Into Reality</span>
-            </h1>
-            <p className="text-lg md:text-xl text-gray-300 mb-10 leading-relaxed max-w-2xl">
-              IyyanSoft Technologies is a leading technology partner for educational institutions, startups, industries, and innovation ecosystems. We specialize in Makers Lab & Idea Lab setup, IT services, prototype development, and digital transformation solutions. We bridge the gap between conceptualization and execution, empowering you to build the future.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Link to="/contact" className="bg-primary text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-primary transition-all flex items-center justify-center gap-2 group">
-                Get a Free Consultation
-                <ArrowRight className="group-hover:translate-x-1 transition-transform" />
-              </Link>
-              <Link to="/services" className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-black transition-all flex items-center justify-center">
-                Explore Our Services
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
+      <section className="relative bg-black text-white py-20 lg:py-32 overflow-hidden">
+  <div className="absolute inset-0">
+    <img
+      src="/assets/hero-bg.jpeg"
+      alt="Abstract technology background"
+      className="w-full h-full object-cover opacity-30"
+    />
+  </div>
+  <div className="absolute inset-0 bg-gradient-to-r from-black via-black/90 to-transparent"></div>
+
+  <div className="container mx-auto px-4 md:px-6 relative z-10">
+    <div className="grid lg:grid-cols-2 gap-10 items-center">
+
+      {/* LEFT CONTENT */}
+      <div>
+       <h1 className="text-5xl md:text-6xl lg:text-6xl font-bold leading-tight mb-6">
+  <span className="block animate-typing">Transforming Ideas</span>
+  <span className="text-primary block animate-typing" style={{ animationDelay: "3s" }}>
+    Into Reality.
+  </span>
+</h1>
+
+
+
+        <p className="relative font-serif text-[18px] md:text-[19px] text-gray-300 mb-12 leading-[1.95] max-w-2xl pl-6 border-l-4 border-primary/60">
+  <span className="absolute -left-3 top-2 w-3 h-3 bg-primary rounded-full animate-ping"></span>
+  IyyanSoft Technologies is a leading technology partner for educational institutions, startups, industries, and innovation ecosystems. We specialize in Makers Lab & Idea Lab setup, IT services, prototype development, and digital transformation solutions. We bridge the gap between conceptualization and execution, empowering you to build the future.
+</p>
+
+
+
+
+        <div className="flex flex-col sm:flex-row gap-6 mt-4">
+
+  {/* Primary Button */}
+  <Link
+    to="/contact"
+    className="relative overflow-hidden group bg-primary text-white px-6 py-2.5 text-base rounded-xl font-bold  flex items-center justify-center gap-3 transition-all duration-500 shadow-lg shadow-primary/40 hover:shadow-primary/70"
+  >
+    <span className="absolute inset-0 bg-white/20 opacity-0 group-hover:opacity-100 transition duration-500"></span>
+
+    <span className="relative z-10 flex items-center gap-2">
+      Get a Free Consultation
+      <ArrowRight className="group-hover:translate-x-2 transition-transform duration-500" />
+    </span>
+
+    {/* shine effect */}
+    <span className="absolute -left-1/2 top-0 h-full w-1/2 bg-white/30 rotate-12 group-hover:left-full transition-all duration-700"></span>
+  </Link>
+
+  {/* Secondary Button */}
+  <Link
+    to="/services"
+    className="relative group px-6 py-2.5 text-base rounded-xl font-bold  flex items-center justify-center border-2 border-white text-white backdrop-blur-md bg-white/5 transition-all duration-500 hover:bg-white hover:text-black hover:shadow-xl"
+  >
+    <span className="absolute inset-0 rounded-xl bg-white opacity-0 group-hover:opacity-10 transition duration-500"></span>
+    <span className="relative z-10">Explore Our Services</span>
+  </Link>
+
+</div>
+
+      </div>
+
+      {/* RIGHT SLIDING CARDS */}
+      <div className="hidden lg:flex justify-center items-center relative h-[420px] perspective-[1200px]">
+
+
+ 
+  {/* CARD 1 */}
+<div className="absolute w-[420px] animate-slide1 bg-white/10 backdrop-blur-xl border border-white/20 p-4 rounded-2xl shadow-xl">
+  <img 
+    src={home1}
+    alt="Makers Lab"
+    className="w-full h-60 object-cover rounded-xl mb-4"
+  />
+</div>
+
+{/* CARD 2 */}
+<div className="absolute w-[420px] animate-slide2 bg-white/10 backdrop-blur-xl border border-white/20 p-4 rounded-2xl shadow-xl">
+  <img 
+    src={home2}
+    alt="Prototype Development"
+    className="w-full h-60 object-cover rounded-xl mb-4"
+  />
+</div>
+
+{/* CARD 3 */}
+<div className="absolute w-[420px] animate-slide3 bg-white/10 backdrop-blur-xl border border-white/20 p-4 rounded-2xl shadow-xl">
+  <img 
+    src={home3}
+    alt="Innovation Support"
+    className="w-full h-60 object-cover rounded-xl mb-4"
+  />
+</div>
+
+
+</div>
+
+
+    </div>
+  </div>
+</section>
+
 
       {/* What We Do Section */}
       <section className="py-20 bg-white">
